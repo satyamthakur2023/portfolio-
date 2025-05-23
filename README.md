@@ -4,8 +4,9 @@
 Welcome to my personal **Portfolio Website**, a creative and fully responsive front-end project built using **HTML**, **CSS**, and **JavaScript**. This site is designed to showcase my skills, projects, and online presence with a unique visual experience, inspired by multiple modern website previews—but with a twist of my own!
 
 ## 🚀 Live Preview
+"This project is a work in progress. The final version of the website will be updated soon. Currently, we are using a template layout generated with the help of AI prompts, designed to reflect our vision and bring our ideas to life."
 
-Check out the live version here: [🔗 Portfolio on Vercel](https://your-vercel-link.vercel.app)coming soon.
+Check out the live version here: [🔗 Portfolio on Vercel](https://portfolio-website-ruby-nine-56.vercel.app/).
 
 ---
 
