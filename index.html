@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+    /* Base Styles */
+:root {
+    --primary-color: #462ff5ae;
+    --secondary-color: #00cec9;
+    --accent-color: #ff025b;
+    --dark-color: #2d3436;
+    --light-color: #ffffff;
+    --text-color: #2d3436;
+    --text-light:rgb(0, 10, 10);
+    --
+    --transition: all 0.3s ease;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+background: radial-gradient(circle at top left, #0d53dfae, #280fcc89);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #5649c0;
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.underline {
+    height: 4px;
+    width: 70px;
+    background: var(--primary-color);
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Navigation */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(15, 99, 254);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: var(--transition);
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 80%;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    z-index: 1;
+}
+
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.shape1 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-color);
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape2 {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary-color);
+    bottom: 20%;
+    right: 15%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape3 {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    bottom: 30%;
+    left: 20%;
+    animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about {
+    background-color: var(--light-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color:fff;
+    margin-bottom: 5px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Skills Section */
+.skills {
+    background-color: var(--white);
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-category {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-category h3 i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.skill-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-item span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #dfe6e9;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-item {
+    padding: 10px 15px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.tech-item i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+/* Projects Section */
+.projects {
+    background-color: var(--light-color);
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    margin: 0 5px 10px;
+    background-color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.project-tag {
+    padding: 5px 10px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.project-link {
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.project-link i {
+    margin-right: 5px;
+}
+
+/* GitHub Activity Section */
+.github-activity {
+    background-color: var(--white);
+    padding: 80px 0;
+}
+
+.github-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.github-stat {
+    text-align: center;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.github-stat i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.github-stat h3 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.github-repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.repo-card {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.repo-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.repo-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.repo-stat {
+    display: flex;
+    align-items: center;
+}
+
+.repo-stat i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.repo-description {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.repo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.repo-language {
+    display: flex;
+    align-items: center;
+}
+
+.language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+   .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .hero-buttons, .social-icons {
+        justify-content: center;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stat-item {
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+    </style>
+</head>
+<body>
+     <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><span class="highlight">AI</span>Developer</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Alex Johnson</span></h1>
+                <h2>AI & Machine Learning Developer</h2>
+                <p>Building intelligent solutions for complex problems</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x500" alt="Profile Image">
+                <div class="floating-shape shape1"></div>
+                <div class="floating-shape shape2"></div>
+                <div class="floating-shape shape3"></div>
+            </div>
+        </div>
+    </section>
+
+   <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate AI and Machine Learning developer with 5+ years of experience building intelligent systems that solve real-world problems. My expertise spans computer vision, natural language processing, and predictive analytics.</p>
+                    <p>With a background in Computer Science and a Master's in Artificial Intelligence, I combine strong theoretical knowledge with practical implementation skills to deliver cutting-edge AI solutions.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>30+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Download CV <i class="fas fa-download"></i></a>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x600" alt="About Me Image">
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Deep Learning</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Computer Vision</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Natural Language Processing</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Reinforcement Learning</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>TensorFlow/PyTorch</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL/NoSQL</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="tech-item"><i class="fas fa-brain"></i> TensorFlow</div>
+                        <div class="tech-item"><i class="fas fa-fire"></i> PyTorch</div>
+                        <div class="tech-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="tech-item"><i class="fab fa-aws"></i> AWS</div>
+                        <div class="tech-item"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="tech-item"><i class="fab fa-git-alt"></i> Git</div>
+                        <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                <button class="filter-btn" data-filter="nlp">NLP</button>
+            </div>
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Activity Section -->
+    <section class="github-activity">
+        <div class="container">
+            <div class="section-header">
+                <h2>GitHub Activity</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="github-stats">
+                <div class="github-stat">
+                    <i class="fas fa-code-branch"></i>
+                    <h3 id="repo-count">0</h3>
+                    <p>Repositories</p>
+                </div>
+                <div class="github-stat">
+                    <i class="fas fa-star"></i>
+                    <h3 id="stars-count">0</h3>
+                    <p>Stars</p>
+                </div>
+                <div class="github-stat">
+                    <i class="fas fa-code-commit"></i>
+                    <h3 id="commits-count">0</h3>
+                    <p>Commits</p>
+                </div>
+            </div>
+            <div class="github-repos" id="github-repos">
+                <!-- GitHub repos will be loaded dynamically -->
+            </div>
+            <div class="github-link">
+                <a href="#" target="_blank" class="btn btn-secondary">View GitHub Profile <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navigation functionality
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+// Toggle mobile menu
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a nav link
+navLinksItems.forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+// Active nav link on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(`.nav-links a[href*=${sectionId}]`).classList.add('active');
+        } else {
+            document.querySelector(`.nav-links a[href*=${sectionId}]`).classList.remove('active');
+        }
+    });
+});
+
+// Sticky navbar
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.style.padding = '10px 0';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.padding = '15px 0';
+        navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+    }
+});
+
+// Project filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectsContainer = document.getElementById('projects-container');
+
+// Sample project data
+const projects = [
+    {
+        id: 1,
+        title: 'Neural Network Image Classifier',
+        description: 'A deep learning model that classifies images with high accuracy using convolutional neural networks.',
+        image: 'https://via.placeholder.com/600x400',
+        category: 'ml',
+        tags: ['Deep Learning', 'CNN', 'Computer Vision'],
+        demoLink: '#',
+        codeLink: '#'
+    },
+    {
+        id: 2,
+        title: 'Sentiment Analysis API',
+        description: 'An API that analyzes text sentiment using natural language processing techniques.',
+        image: 'https://via.placeholder.com/600x400',
+        category: 'nlp',
+        tags: ['NLP', 'API', 'BERT'],
+        demoLink: '#',
+        codeLink: '#'
+    },
+    {
+        id: 3,
+        title: 'Object Detection System',
+        description: 'Real-time object detection system using YOLO algorithm for video streams.',
+        image: 'https://via.placeholder.com/600x400',
+        category: 'cv',
+        tags: ['Computer Vision', 'YOLO', 'Real-time'],
+        demoLink: '#',
+        codeLink: '#'
+    },
+    {
+        id: 4,
+        title: 'Chatbot with GPT Integration',
+        description: 'An intelligent chatbot that uses GPT models to generate human-like responses.',
+        image: 'https://via.placeholder.com/600x400',
+        category: 'nlp',
+        tags: ['NLP', 'GPT', 'Chatbot'],
+        demoLink: '#',
+        codeLink: '#'
+    },
+    {
+        id: 5,
+        title: 'Predictive Analytics Dashboard',
+        description: 'A dashboard that uses machine learning to predict business metrics and visualize trends.',
+        image: 'https://via.placeholder.com/600x400',
+        category: 'ml',
+        tags: ['ML', 'Dashboard', 'Visualization'],
+        demoLink: '#',
+        codeLink: '#'
+    },
+    {
+        id: 6,
+        title: 'Facial Recognition System',
+        description: 'A system that recognizes and verifies faces using deep learning techniques.',
+        image: 'https://via.placeholder.com/600x400',
+        category: 'cv',
+        tags: ['Computer Vision', 'Face Recognition', 'Security'],
+        demoLink: '#',
+        codeLink: '#'
+    }
+];
+
+// Display all projects initially
+window.addEventListener('DOMContentLoaded', () => {
+    displayProjects('all');
+});
+
+// Filter projects
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Filter projects
+        const filterValue = button.getAttribute('data-filter');
+        displayProjects(filterValue);
+    });
+});
+
+// Function to display projects based on filter
+function displayProjects(filter) {
+    projectsContainer.innerHTML = '';
+    
+    const filteredProjects = filter === 'all' 
+        ? projects 
+        : projects.filter(project => project.category === filter);
+    
+    filteredProjects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        
+        projectCard.innerHTML = `
+            <div class="project-image">
+                <img src="${project.image}" alt="${project.title}">
+            </div>
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                </div>
+                <p>${project.description}</p>
+                <div class="project-links">
+                    <a href="${project.demoLink}" class="project-link btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </a>
+                    <a href="${project.codeLink}" class="project-link btn-secondary" target="_blank">
+                        <i class="fas fa-code"></i> Code
+                    </a>
+                </div>
+            </div>
+        `;
+        
+        projectsContainer.appendChild(projectCard);
+    });
+}
+
+// GitHub API integration
+const username = 'yourusername'; // Replace with your GitHub username
+const repoCount = document.getElementById('repo-count');
+const starsCount = document.getElementById('stars-count');
+const commitsCount = document.getElementById('commits-count');
+const githubRepos = document.getElementById('github-repos');
+
+// Simulated GitHub data (replace with actual API calls in production)
+const simulateGitHubData = () => {
+    // Update stats
+    repoCount.textContent = '25';
+    starsCount.textContent = '142';
+    commitsCount.textContent = '1,253';
+    
+    // Sample repositories data
+    const repos = [
+        {
+            name: 'deep-learning-models',
+            description: 'A collection of deep learning models implemented in PyTorch and TensorFlow',
+            stars: 48,
+            forks: 23,
+            language: 'Python',
+            languageColor: '#3572A5'
+        },
+        {
+            name: 'nlp-toolkit',
+            description: 'A toolkit for natural language processing tasks',
+            stars: 36,
+            forks: 15,
+            language: 'Python',
+            languageColor: '#3572A5'
+        },
+        {
+            name: 'computer-vision-projects',
+            description: 'Various computer vision projects and experiments',
+            stars: 29,
+            forks: 12,
+            language: 'Python',
+            languageColor: '#3572A5'
+        }
+    ];
+    
+    // Display repositories
+    repos.forEach(repo => {
+        const repoCard = document.createElement('div');
+        repoCard.className = 'repo-card';
+        
+        repoCard.innerHTML = `
+            <div class="repo-header">
+                <a href="#" class="repo-name">${repo.name}</a>
+                <div class="repo-stats">
+                    <div class="repo-stat">
+                        <i class="fas fa-star"></i>
+                        <span>${repo.stars}</span>
+                    </div>
+                    <div class="repo-stat">
+                        <i class="fas fa-code-branch"></i>
+                        <span>${repo.forks}</span>
+                    </div>
+                </div>
+            </div>
+            <p class="repo-description">${repo.description}</p>
+            <div class="repo-footer">
+                <div class="repo-language">
+                    <span class="language-color" style="background-color: ${repo.languageColor}"></span>
+                    <span>${repo.language}</span>
+                </div>
+                <a href="#" class="repo-link">View</a>
+            </div>
+        `;
+        
+        githubRepos.appendChild(repoCard);
+    });
+};
+
+// Load GitHub data
+window.addEventListener('DOMContentLoaded', simulateGitHubData);
+
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Animation on scroll (simple implementation)
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.skill-category, .project-card, .stat-item, .github-stat, .contact-info, .contact-form');
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+};
+
+// Set initial styles for animation
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.skill-category, .project-card, .stat-item, .github-stat, .contact-info, .contact-form');
+    
+    elements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    // Trigger initial animation
+    animateOnScroll();
+});
+
+// Listen for scroll to trigger animations
+window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
