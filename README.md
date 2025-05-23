@@ -86,6 +86,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 ⭐ If you like this project, feel free to star the repo and share it!
-
-```
-
