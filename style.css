@@ -1,11 +1,11 @@
  /* Base Styles */
 :root {
-  --primary-color: #0F172A;     /* Deep Space Blue - confident and futuristic */
-  --secondary-color: #10B981;   /* Emerald Green - fresh and energizing */
-  --accent-color: #F472B6;      /* Pink Coral - trendy and expressive */
-  --dark-color: #1E293B;        /* Slate Blue-Gray - deep and modern */
-  --light-color: #F9FAFB;       /* Clean Mist - bright and soft for backgrounds */
-  --text-color: #111827;        /* Jet Gray - dark enough for great readability */
+  --primary-color: #40E0D0 
+  --secondary-color:#6495ED;   
+  --accent-color: #CCCCFF;     
+  --dark-color: #1E293B;       
+  --light-color: #FF7F50;      
+  --text-color: #0000;        
 }
       /* Dark charcoal - highly readable and polished */
   --text-light:rgb(0, 10, 10);
