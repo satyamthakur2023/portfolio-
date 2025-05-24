@@ -1,6 +1,6 @@
  /* Base Styles */
 :root {
-    --primary-color:#40E0D0;
+    --primary-color:#6495ED;
     --secondary-color:#FFA07A;
     --accent-color:#CCCCFF;
     --dark-color:#6495ED;
@@ -134,7 +134,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color:rgb(15, 99, 254);
+    background-color:#FF7F50;
     box-shadow: var(--shadow);
     z-index: 1000;
     padding: 15px 0;
