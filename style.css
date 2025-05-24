@@ -875,7 +875,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  gap:10px;
   max-width: 1200px;
   margin: 0 auto;
 }
