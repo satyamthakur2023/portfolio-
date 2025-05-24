@@ -1,11 +1,13 @@
  /* Base Styles */
 :root {
-  --primary-color: #1E1E2F;     /* Elegant deep indigo - sleek and modern */
-  --secondary-color: #FF6B6B;   /* Lively soft red - vibrant but not harsh */
-  --accent-color: #6C5CE7;      /* Vivid lavender - perfect for highlights and CTAs */
-  --dark-color: #2D2D44;        /* Muted dark slate - gentle on the eyes */
-  --light-color: #F8F9FA;       /* Ultra-light gray - soft background without the glare of white */
-  --text-color: #212529;        /* Dark charcoal - highly readable and polished */
+  --primary-color: #0F172A;     /* Deep Space Blue - confident and futuristic */
+  --secondary-color: #10B981;   /* Emerald Green - fresh and energizing */
+  --accent-color: #F472B6;      /* Pink Coral - trendy and expressive */
+  --dark-color: #1E293B;        /* Slate Blue-Gray - deep and modern */
+  --light-color: #F9FAFB;       /* Clean Mist - bright and soft for backgrounds */
+  --text-color: #111827;        /* Jet Gray - dark enough for great readability */
+}
+      /* Dark charcoal - highly readable and polished */
   --text-light:rgb(0, 10, 10);
     --
     --transition: all 0.3s ease;
