@@ -763,8 +763,8 @@ img {
         margin: 5px 0;
     }
 }
-/* Grid Container */
-.grid-container {
+/* Grid certificate */
+.grid-certificate {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
@@ -875,7 +875,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap:10px;
+  gap:30px;
   max-width: 1200px;
   margin: 0 auto;
 }
