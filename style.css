@@ -1,10 +1,10 @@
  /* Base Styles */
 :root {
-  --primary-color:white; 
-  --secondary-color:##8DD8FF;   
-  --accent-color:#BBFBFF;     
-  --dark-color: #A594F9;       
-  --light-color: #6495ED;      
+  --primary-color:#4E71FF; 
+  --secondary-color:#A594F9;   
+  --accent-color:#6FE6FC;     
+  --dark-color: #FFE99A;       
+  --light-color:#FFD6BA;     
   --text-color: #ffff;        
 }
       /* Dark charcoal - highly readable and polished */
