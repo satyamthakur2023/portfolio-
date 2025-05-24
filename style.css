@@ -1,11 +1,13 @@
  /* Base Styles */
-:root {
-    --primary-color:##191970;
-    --secondary-color:#FFA07A;
-    --accent-color:#CCCCFF;
-    --dark-color:#6495ED;
-    --light-color:#ffff;
-    --text-color: #2d3436;
+:root {   
+    --primary-color: #0D1B2A;     /* Deep navy blue - strong and sophisticated */
+    --secondary-color: #F76C5E;  /* Coral red - energetic and modern */
+    --accent-color: #A3CEF1;     /* Soft sky blue - calming and light accent */
+    --dark-color: #1B263B;       /* Charcoal blue - for depth and contrast */
+    --light-color: #F1F1F1;      /* Warm light gray - easier on the eyes than pure white */
+    --text-color: #2E2E2E;       /* Neutral dark gray - better readability than pure black */
+}
+
     --text-light:rgb(0, 10, 10);
     --
     --transition: all 0.3s ease;
