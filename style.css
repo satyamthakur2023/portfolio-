@@ -1,14 +1,12 @@
  /* Base Styles */
-:root {   
-    --primary-color: #0D1B2A;     /* Deep navy blue - strong and sophisticated */
-    --secondary-color: #F76C5E;  /* Coral red - energetic and modern */
-    --accent-color: #A3CEF1;     /* Soft sky blue - calming and light accent */
-    --dark-color: #1B263B;       /* Charcoal blue - for depth and contrast */
-    --light-color: #F1F1F1;      /* Warm light gray - easier on the eyes than pure white */
-    --text-color: #6495ED;      
-}
-
-    --text-light:rgb(0, 10, 10);
+:root {
+  --primary-color: #1E1E2F;     /* Elegant deep indigo - sleek and modern */
+  --secondary-color: #FF6B6B;   /* Lively soft red - vibrant but not harsh */
+  --accent-color: #6C5CE7;      /* Vivid lavender - perfect for highlights and CTAs */
+  --dark-color: #2D2D44;        /* Muted dark slate - gentle on the eyes */
+  --light-color: #F8F9FA;       /* Ultra-light gray - soft background without the glare of white */
+  --text-color: #212529;        /* Dark charcoal - highly readable and polished */
+  --text-light:rgb(0, 10, 10);
     --
     --transition: all 0.3s ease;
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
