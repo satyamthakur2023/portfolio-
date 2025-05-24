@@ -298,3 +298,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Listen for scroll to trigger animations
 window.addEventListener('scroll', animateOnScroll);
+
+ // Lightbox Functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('close-btn');
+const gridItems = document.querySelectorAll('.grid-item');
+
+gridItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const imgSrc = item.querySelector('img').src;
+        lightbox.style.display = 'flex';
+        lightboxImg.src = imgSrc;
+        setTimeout(() => lightbox.style.opacity = 1, 10);  // Ensures smooth fade-in effect
+        lightbox.style.pointerEvents = 'auto';  // Enables click functionality
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.style.opacity = 0;
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+        lightbox.style.pointerEvents = 'none';
+    }, 500);
+});
