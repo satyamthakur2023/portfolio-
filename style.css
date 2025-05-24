@@ -1,6 +1,6 @@
  /* Base Styles */
 :root {
-    --primary-color:#6495ED;
+    --primary-color:##191970;
     --secondary-color:#FFA07A;
     --accent-color:#CCCCFF;
     --dark-color:#6495ED;
@@ -25,7 +25,7 @@ html {
 
 body {
     line-height: 1.6;
-background: radial-gradient(circle at top left,#6495ED
+background: radial-gradient(circle at top left,#FA5F55
 100, 149, 237);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow-x: hidden;}
