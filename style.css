@@ -700,7 +700,7 @@ img {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--white);
+        background-color:#CCCCFF;
         flex-direction: column;
         align-items: center;
         justify-content: center;
