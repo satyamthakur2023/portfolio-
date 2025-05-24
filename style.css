@@ -1,9 +1,9 @@
  /* Base Styles */
 :root {
-  --primary-color: #40E0D0 
-  --secondary-color:#6495ED;   
-  --accent-color: #CCCCFF;     
-  --dark-color: #1E293B;       
+  --primary-color:#5409DA; 
+  --secondary-color:##8DD8FF;   
+  --accent-color:#BBFBFF;     
+  --dark-color: #A594F9;       
   --light-color: #6495ED;      
   --text-color: #0000;        
 }
