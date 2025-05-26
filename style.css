@@ -4,7 +4,7 @@
   --secondary-color:#A594F9;   
   --accent-color:#6FE6FC;     
   --dark-color: #FFE99A;       
-  --light-color:#BFBFBF;     
+  --light-color:linear-gradient(to right top, #2372fb, #009aff, #00b8fa, #00cfdc, #53e2c1);;     
   --text-color: #ffff;        
 }
       /* Dark charcoal - highly readable and polished */
