@@ -240,6 +240,7 @@ img {
 
 .hero-buttons {
     margin-bottom: 30px;
+ border-radius:10px;
 }
 
 .social-icons {
